@@ -7,7 +7,7 @@ import { ThemeProvider } from './context/ThemeContext';
 function App() {
   useEffect(() => {
     // Update the document title
-    document.title = 'Your Name | Portfolio';
+    document.title = 'Joy Mutanu | Portfolio';
   }, []);
 
   return (
