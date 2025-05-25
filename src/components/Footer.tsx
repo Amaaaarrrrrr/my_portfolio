@@ -18,14 +18,18 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <a 
-                href="#" 
+                href="https://github.com/Amaaaarrrrrr" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                 aria-label="Github"
               >
                 <Github size={20} />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/joy-mutanu-93022a248/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
@@ -33,13 +37,15 @@ const Footer: React.FC = () => {
               </a>
               <a 
                 href="#" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
               </a>
               <a 
-                href="mailto:yourname@example.com" 
+                href="mailto:mutanu801@gmail.com" 
                 className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                 aria-label="Email"
               >
