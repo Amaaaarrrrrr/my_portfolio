@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight} from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -17,21 +17,24 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
                 href="#projects" 
-                className="flex items-center justify-center px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors duration-300"
+                className="flex items-center justify-center px-8 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow transition-colors duration-300"
               >
                 View My Work
                 <ArrowRight size={18} className="ml-2" />
               </a>
+
               <a 
-                href="/myresume.pdf" 
-                download 
-                className="flex items-center justify-center px-8 py-3 rounded-lg border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 font-medium transition-colors duration-300"
+                href="https://docs.google.com/document/d/1PmZ6YsbvtlnCYkbiMoiXDutdAYOZwmWJxl2YmOzwi6c/edit?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center px-8 py-3 rounded-2xl border border-neutral-300 dark:border-neutral-600 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-neutral-800 font-semibold shadow transition-colors duration-300"
               >
-                Download CV
-                <Download size={18} className="ml-2" />
+                View CV
+                <ArrowRight size={18} className="ml-2" />
               </a>
 
             </div>
+
           </div>
           <div className="md:w-1/2 flex justify-center md:justify-end">
             <div className="md:w-1/2 flex justify-center md:justify-end">

@@ -169,7 +169,7 @@ const Contact: React.FC = () => {
                             ? 'border-red-500 dark:border-red-500' 
                             : 'border-gray-300 dark:border-gray-700'
                         } bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                        placeholder="John Doe"
+                        placeholder="Your Name here"
                       />
                       {errors.name && (
                         <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.name}</p>
@@ -191,7 +191,7 @@ const Contact: React.FC = () => {
                             ? 'border-red-500 dark:border-red-500' 
                             : 'border-gray-300 dark:border-gray-700'
                         } bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                        placeholder="john@example.com"
+                        placeholder="Your Email here"
                       />
                       {errors.email && (
                         <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.email}</p>

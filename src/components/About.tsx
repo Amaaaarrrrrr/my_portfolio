@@ -1,5 +1,6 @@
 import React from 'react';
 import { User, Briefcase, GraduationCap } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -21,7 +22,25 @@ const About: React.FC = () => {
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               I enjoy learning and adapting to new technologies, contributing to open-source projects, and building products that make an impact. Outside coding, I love mentoring others, writing technical blogs, and exploring innovation in tech.
             </p>
+
+            <p className="text-lg text-gray-700 dark:text-gray-300 mt-6">
+              Feel free to connect with me on <a href="https://www.linkedin.com/in/joy-mutanu/" className="text-blue-600 dark:text-blue-400 hover:underline">LinkedIn</a> or check out my <a href="https://github.com/joymutanu" className="text-blue-600 dark:text-blue-400 hover:underline">GitHub</a>.
+            </p>
+
+            <div className="mt-6">
+              <a
+                href="/JoyMutanu-Resume.pdf" 
+                download 
+                className="inline-flex items-center px-8 py-3 rounded-2xl border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30 font-semibold shadow transition-colors duration-300"
+              >
+                Download CV
+                <Download size={18} className="ml-2" />
+              </a>
+            </div>
+
           </div>
+
+         
 
           <div className="space-y-8">
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
