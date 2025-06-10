@@ -24,7 +24,7 @@ const About: React.FC = () => {
             </p>
 
             <p className="text-lg text-gray-700 dark:text-gray-300 mt-6">
-              Feel free to connect with me on <a href="https://www.linkedin.com/in/joy-mutanu/" className="text-blue-600 dark:text-blue-400 hover:underline">LinkedIn</a> or check out my <a href="https://github.com/joymutanu" className="text-blue-600 dark:text-blue-400 hover:underline">GitHub</a>.
+              Feel free to connect with me on <a href="https://www.linkedin.com/in/joy-mutanu-93022a248/" className="text-blue-600 dark:text-blue-400 hover:underline">LinkedIn</a> or check out my <a href="https://github.com/Amaaaarrrrrr" className="text-blue-600 dark:text-blue-400 hover:underline">GitHub</a>.
             </p>
 
             <div className="mt-6">
