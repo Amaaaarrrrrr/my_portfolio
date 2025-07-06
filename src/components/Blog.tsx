@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MDEditor from '@uiw/react-md-editor';
 import { Calendar, Clock, User } from 'lucide-react';
 import { format } from 'date-fns';
-
+import { motion } from 'framer-motion';
 
 interface BlogPost {
   id: number;
@@ -88,7 +88,11 @@ const Blog: React.FC = () => {
         {/* Section Heading */}
         <div className="flex flex-col items-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Blog</h2>
-          <div className="w-20 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
+          <motion.div
+            className="w-20 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full"
+            animate={{ scaleX: [0.5, 1.2, 1] }}
+            transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+          />
           <p className="mt-6 text-center text-gray-700 dark:text-gray-300 max-w-2xl">
             Sharing my thoughts and experiences in web development.
           </p>

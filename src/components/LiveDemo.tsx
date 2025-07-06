@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Play } from 'lucide-react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-
+import { LiveProvider, LiveError, LivePreview } from 'react-live';
+import { motion } from 'framer-motion';
 interface CodeDemo {
   id: number;
   title: string;
@@ -67,7 +67,11 @@ const LiveDemo: React.FC = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Live Code Demos</h2>
-          <div className="w-20 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
+           <motion.div
+            className="w-20 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full"
+            animate={{ scaleX: [0.5, 1.2, 1] }}
+            transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+          />  
           <p className="mt-6 text-center text-gray-700 dark:text-gray-300 max-w-2xl">
             Interactive code examples showcasing my development skills.
           </p>

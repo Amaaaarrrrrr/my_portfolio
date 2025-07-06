@@ -13,6 +13,7 @@ const navLinks: NavLink[] = [
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
+  { name: 'Packages', href: '#pricing' },
 ];
 
 const Navbar: React.FC = () => {

@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-
+import { motion } from 'framer-motion';
 interface CaseStudy {
   id: number;
   title: string;
@@ -73,7 +72,11 @@ const CaseStudies: React.FC = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Case Studies</h2>
-          <div className="w-20 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
+          <motion.div
+            className="w-20 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full"
+            animate={{ scaleX: [0.5, 1.2, 1] }}
+            transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+          />
           <p className="mt-6 text-center text-gray-700 dark:text-gray-300 max-w-2xl">
             Detailed analysis of selected projects and their impact.
           </p>
