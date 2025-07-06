@@ -11,6 +11,46 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+   {
+    title: "Ambulance Ride System (Flask)",
+    description: "A backend system to manage ride requests, drivers, and hospitals.",
+    tags: ["Flask", "SQLAlchemy", "REST API"],
+    image: "/ambulance.webp",
+    demoUrl: "https://ambulance-app-b741.onrender.com/",
+    codeUrl: "https://github.com/fahmy-dev/ambulance-app",
+  },
+  {
+    title: 'FaithConnect Platform',
+    description: 'A full-stack Christian platform built with React and Flask. Enables users to explore faith-based content and connect with other believers.',
+    image: '/faithconnect.jpg', 
+    tags: ['React', 'Flask', 'Faith App'],
+    demoUrl: 'https://faithconnect0.vercel.app/',
+    codeUrl: 'https://github.com/Amaaaarrrrrr/faithconnect',
+  },
+  {
+    title: 'Camera Website',
+    description: 'A modern photography/portfolio website showcasing Camara Education projects and initiatives.',
+    image: '/camera.jpeg', 
+    tags: ['HTML', 'CSS', 'Static Site'],
+    demoUrl: 'https://amaaaarrrrrr.github.io/camera-website/',
+    codeUrl: 'https://github.com/Amaaaarrrrrr/camera-website',
+  },
+  // {
+  //   title: 'University Student Portal',
+  //   description: 'A full-stack university student portal built with React (frontend) and Flask (backend). It supports role-based dashboards for Students, Lecturers, and Admins, and provides features like academic unit registration, hostel booking, grade viewing/posting, fee payments, document requests, and clearance tracking.',
+  //   image: '/university.jpeg',
+  //   tags: ['React', 'Flask', 'Full Stack'],
+  //   demoUrl: 'https://university-portal-568b.onrender.com/',
+  //   codeUrl: 'https://github.com/Amaaaarrrrrr/University_Portal',
+  // },
+  {
+    title: 'Bizitel Website',
+    description: 'A professional website for Bizitel, offering SIYB training, M&E research, and data analytics services. Features sections for e-learning, testimonials, bookings, and more.',
+    image: '/school.jpg',
+    tags: ['React', 'Tailwind', 'Professional Website'],
+    demoUrl: 'https://sj-website-rho.vercel.app/',
+    codeUrl: 'https://github.com/Amaaaarrrrrr/SJWebsite',
+  },
   {
     title: "Makeup Product Website",
     description: "A React-based site using the Makeup API to browse Maybelline products.",
@@ -35,30 +75,7 @@ export const projects: Project[] = [
     demoUrl: "https://shopping-cart-phase2.vercel.app/",
     codeUrl: "https://github.com/Amaaaarrrrrr/shopping-cart-phase2",
   },
-  {
-    title: "Ambulance Ride System (Flask)",
-    description: "A backend system to manage ride requests, drivers, and hospitals.",
-    tags: ["Flask", "SQLAlchemy", "REST API"],
-    image: "/ambulance.webp",
-    demoUrl: "https://ambulance-app-b741.onrender.com/",
-    codeUrl: "https://github.com/fahmy-dev/ambulance-app",
-  },
-  {
-    title: 'University Student Portal',
-    description: 'A full-stack university student portal built with React (frontend) and Flask (backend). It supports role-based dashboards for Students, Lecturers, and Admins, and provides features like academic unit registration, hostel booking, grade viewing/posting, fee payments, document requests, and clearance tracking.',
-    image: '/university.jpeg',
-    tags: ['React', 'Flask', 'Full Stack'],
-    demoUrl: 'https://university-portal-568b.onrender.com/',
-    codeUrl: 'https://github.com/Amaaaarrrrrr/University_Portal',
-  },
-  {
-    title: 'Bizitel Website',
-    description: 'A professional website for Bizitel, offering SIYB training, M&E research, and data analytics services. Features sections for e-learning, testimonials, bookings, and more.',
-    image: '/school.jpg',
-    tags: ['React', 'Tailwind', 'Professional Website'],
-    demoUrl: 'https://sj-website-rho.vercel.app/',
-    codeUrl: 'https://github.com/Amaaaarrrrrr/SJWebsite',
-  },
+ 
 ];
 
 const Projects: React.FC = () => {
