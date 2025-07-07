@@ -1,6 +1,7 @@
 import React from 'react';
 import Contact from './Contact';
 import { motion } from 'framer-motion';
+
 const pricingData = [
   {
     category: 'Frontend Only (Static or Single-Page)',
@@ -89,11 +90,11 @@ const Price: React.FC = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-6">
           Pricing & Packages
         </h2>
-         <motion.div
-            className="w-20 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full items-center mx-auto mb-8"
-            animate={{ scaleX: [0.5, 1.2, 1] }}
-            transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-          />  
+        <motion.div
+          className="w-20 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full items-center mx-auto mb-8"
+          animate={{ scaleX: [0.5, 1.2, 1] }}
+          transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+        />  
         <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
           Transparent pricing tailored to your needs. Below are typical package ranges — final quotes may vary based on features, urgency, and complexity.
         </p>
@@ -104,11 +105,26 @@ const Price: React.FC = () => {
               {section.category}
             </h3>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <motion.div 
+              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: 0.15,
+                  },
+                },
+              }}
+            >
               {section.plans.map((plan, i) => (
-                <div
+                <motion.div
                   key={i}
                   className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
                 >
                   <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{plan.name}</h4>
                   <span className="inline-block text-sm font-semibold bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-3 py-1 rounded-full mb-4">
@@ -122,9 +138,9 @@ const Price: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         ))}
 
@@ -145,7 +161,6 @@ const Price: React.FC = () => {
 
         {/* Contact Form Section */}
         <div className="mt-24 text-center">
-          
           <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Ready to Get Started?</h3>
           <div className="max-w-7xl mx-auto">
             <Contact />

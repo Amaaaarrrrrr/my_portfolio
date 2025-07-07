@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, BookOpen, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 interface Achievement {
   id: number;
   title: string;
@@ -53,6 +54,19 @@ const achievements: Achievement[] = [
   }
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
 
 const Achievements: React.FC = () => {
   const getIcon = (icon: Achievement['icon']) => {
@@ -81,9 +95,19 @@ const Achievements: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {achievements.map((achievement) => (
-            <div key={achievement.id} className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm">
+            <motion.div
+              key={achievement.id}
+              variants={cardVariants}
+              className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
+            >
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400 mr-4">
                   {getIcon(achievement.icon)}
@@ -99,9 +123,9 @@ const Achievements: React.FC = () => {
                   {achievement.type}
                 </span>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

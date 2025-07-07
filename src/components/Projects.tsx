@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import { motion } from 'framer-motion';
 
 export interface Project {
   title: string;
@@ -11,7 +12,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-   {
+  {
     title: "Ambulance Ride System (Flask)",
     description: "A backend system to manage ride requests, drivers, and hospitals.",
     tags: ["Flask", "SQLAlchemy", "REST API"],
@@ -35,14 +36,6 @@ export const projects: Project[] = [
     demoUrl: 'https://amaaaarrrrrr.github.io/camera-website/',
     codeUrl: 'https://github.com/Amaaaarrrrrr/camera-website',
   },
-  // {
-  //   title: 'University Student Portal',
-  //   description: 'A full-stack university student portal built with React (frontend) and Flask (backend). It supports role-based dashboards for Students, Lecturers, and Admins, and provides features like academic unit registration, hostel booking, grade viewing/posting, fee payments, document requests, and clearance tracking.',
-  //   image: '/university.jpeg',
-  //   tags: ['React', 'Flask', 'Full Stack'],
-  //   demoUrl: 'https://university-portal-568b.onrender.com/',
-  //   codeUrl: 'https://github.com/Amaaaarrrrrr/University_Portal',
-  // },
   {
     title: 'Bizitel Website',
     description: 'A professional website for Bizitel, offering SIYB training, M&E research, and data analytics services. Features sections for e-learning, testimonials, bookings, and more.',
@@ -75,7 +68,6 @@ export const projects: Project[] = [
     demoUrl: "https://shopping-cart-phase2.vercel.app/",
     codeUrl: "https://github.com/Amaaaarrrrrr/shopping-cart-phase2",
   },
- 
 ];
 
 const Projects: React.FC = () => {
@@ -88,7 +80,12 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4 md:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="container mx-auto px-4 md:px-8"
+      >
         <div className="flex flex-col items-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">My Projects</h2>
           <div className="w-20 h-1.5 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
@@ -97,7 +94,12 @@ const Projects: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <motion.div
+          className="flex flex-wrap justify-center gap-3 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
           <button
             onClick={() => setSelectedTag(null)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
@@ -121,14 +123,33 @@ const Projects: React.FC = () => {
               {tag}
             </button>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
           {filteredProjects.map(project => (
-            <ProjectCard key={project.title} project={project} />
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+            >
+              <ProjectCard project={project} />
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
