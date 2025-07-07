@@ -9,13 +9,19 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-50 dark:bg-gray-900 py-12">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-8 md:mb-0">
-            <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">Portfolio</h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-md">
-              Building beautiful, functional digital experiences with clean code and thoughtful design.
-            </p>
-    
+          <div className="mb-8 md:mb-0 items-center md:items-start text-center md:text-left">
             <div className="flex flex-col items-center md:items-start">
+              <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">Portfolio</h2>
+              <p className="text-gray-600 dark:text-gray-400 max-w-md">
+                Hi, I'm Joy Mutanu, a passionate web developer specializing in creating beautiful and functional websites. I love turning ideas into reality with clean code and modern design.
+              </p>
+            </div>
+            <div className="mt-4">
+              <p className="text-gray-600 dark:text-gray-400 max-w-md">
+                Based in Nairobi, Kenya. Available for freelance projects and collaborations.
+              </p>
+            </div>
+            {/* <div className="flex flex-col items-center md:items-start">
                 <h5 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">Quick Links</h5>
                 <nav className="flex flex-wrap justify-center mb-4 md:mb-0">
                   <a href="#home" className="mx-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Home</a>
@@ -25,7 +31,7 @@ const Footer: React.FC = () => {
                   <a href="#contact" className="mx-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Contact</a>
                   <a href="#pricing" className="mx-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Packages</a>
                 </nav>
-            </div>
+            </div> */}
             
           </div>
           
