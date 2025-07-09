@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, Briefcase, GraduationCap, Download } from 'lucide-react';
+import { User, Briefcase, GraduationCap, ArrowRight} from 'lucide-react';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -74,13 +74,15 @@ const About: React.FC = () => {
 
             <div className="mt-6">
               <a
-                href="/JoyMutanu-Resume.pdf"
-                download
+                href="https://docs.google.com/document/d/1PmZ6YsbvtlnCYkbiMoiXDutdAYOZwmWJxl2YmOzwi6c/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-3 rounded-2xl border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30 font-semibold shadow transition-colors duration-300"
               >
-                Download CV
-                <Download size={18} className="ml-2" />
+                View CV
+                <ArrowRight size={18} className="ml-2" />
               </a>
+              
             </div>
           </motion.div>
 
