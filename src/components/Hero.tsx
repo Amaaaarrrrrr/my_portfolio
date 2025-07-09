@@ -151,7 +151,7 @@ const Hero: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-300 text-sm">Years of Experience</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">100%</p>
+            <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">90%</p>
             <p className="text-gray-600 dark:text-gray-300 text-sm">Client Satisfaction</p>
           </div>
         </div>

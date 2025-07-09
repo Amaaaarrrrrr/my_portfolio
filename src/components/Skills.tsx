@@ -8,22 +8,33 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: 'HTML & CSS', level: 95, category: 'frontend' },
-  { name: 'JavaScript', level: 90, category: 'frontend' },
-  { name: 'TypeScript', level: 85, category: 'frontend' },
-  { name: 'React', level: 90, category: 'frontend' },
-  { name: 'Next.js', level: 80, category: 'frontend' },
-  { name: 'Tailwind CSS', level: 85, category: 'frontend' },
-  { name: 'Node.js', level: 75, category: 'backend' },
-  { name: 'Express', level: 70, category: 'backend' },
-  { name: 'Python', level: 85, category: 'backend' },
-  { name: 'Flask', level: 80, category: 'backend' },
-  { name: 'MongoDB', level: 65, category: 'backend' },
-  { name: 'WordPress', level: 85, category: 'other' },
-  { name: 'Git', level: 85, category: 'other' },
-  { name: 'UI/UX Design', level: 75, category: 'other' },
-  { name: 'Responsive Design', level: 90, category: 'frontend' },
+  { name: 'HTML & CSS', level: 75, category: 'frontend' },
+  { name: 'JavaScript', level: 60, category: 'frontend' },
+  { name: 'TypeScript', level: 70, category: 'frontend' },
+  { name: 'RESTful APIs', level: 70, category: 'frontend' },
+  { name: 'Form Handling (Formik / React Hook Form)', level: 60, category: 'frontend' },
+  { name: 'React', level: 63, category: 'frontend' },
+  { name: 'Next.js', level: 55, category: 'frontend' },
+  { name: 'Tailwind CSS', level: 70, category: 'frontend' },
+  { name: 'Node.js', level: 55, category: 'backend' },
+  { name: 'Express', level: 45, category: 'backend' },
+  { name: 'Python', level: 60, category: 'backend' },
+  { name: 'Flask', level: 70, category: 'backend' },
+  { name: 'MongoDB', level: 50, category: 'backend' },
+  { name: 'PostgreSQL / MySQL', level: 70, category: 'backend' },
+  { name: 'Authentication (JWT / OAuth)', level: 55, category: 'backend' },
+  { name: 'WordPress', level: 65, category: 'other' },
+  { name: 'Git', level: 70, category: 'other' },
+  { name: 'UI/UX Design', level: 60, category: 'other' },
+  { name: 'Vercel ', level: 75, category: 'other' },
+  { name: 'Render', level: 60, category: 'other' },
+  { name: 'Heroku', level: 45, category: 'other' },
+  { name: 'Docker (basic)', level: 40, category: 'other' },
+  { name: 'CI/CD Basics (GitHub Actions)', level: 40, category: 'other' },
+  { name: 'API Testing (Postman)', level: 70, category: 'other' },
+  { name: 'Responsive Design', level: 75, category: 'frontend' },
 ];
+
 
 const SkillBar: React.FC<{ name: string; level: number }> = ({ name, level }) => {
   return (
