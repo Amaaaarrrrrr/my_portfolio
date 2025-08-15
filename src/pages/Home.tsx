@@ -9,7 +9,7 @@ import Blog from '../components/Blog';
 import GitHubActivity from '../components/GitHubActivity';
 // import LiveDemo from '../components/LiveDemo';
 // import Contact from '../components/Contact';
-import Price from '../components/Price';
+// import Price from '../components/Price';
 
 const Home: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
       <Skills />
       <Projects />
       {/* <LiveDemo /> */}
-      <Price />
+      {/* <Price /> */}
       <Achievements />
       <Blog />
       <GitHubActivity />
